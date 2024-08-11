@@ -21,7 +21,7 @@ export default defineConfig({
       markdown: {
         remarkPlugins: [remarkReadingTime],
       },
-      output: "server",
+    //   output: "server",
       vite: {
         assetsInclude: "**/*.riv",
       },
