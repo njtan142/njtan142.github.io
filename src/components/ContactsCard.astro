@@ -1,10 +1,11 @@
 ---
 import Card from "./Card/index.astro";
 import { LINKS } from "../lib/constants";
+import { Icon } from "astro-icon/components";
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
-  <div class="h-full">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-4" >
+  <div class="h-full ">
     <header class="flex items-center">
       <h1 class="text-white text-xl font-bold">
         Let's start working together!
@@ -12,23 +13,49 @@ import { LINKS } from "../lib/constants";
     </header>
     <address class="flex flex-col mt-4">
       <h2 class="text-gray-500">Contact Details</h2>
-      <p>cavallogianmarco@gmail.com</p>
-      <p>Italy</p>
+      <p class="mt-2 flex items-center">
+        <Icon name="ri:mail-fill" class="h-4 mr-2" />
+        njtan142@gmail.com
+      </p>
+      <p class="mt-2 flex items-center">
+        <Icon name="ri:map-pin-2-fill" class="h-4 mr-2" />
+        Cebu, Philippines
+      </p>
     </address>
     <div class="flex flex-col mt-4 w-fit">
       <h2 class="text-gray-500">Socials</h2>
-      <ul>
-        <li>
-          <a href={LINKS.linkedin} target="_blank">Linkedin</a>
+      <ul class="flex flex-wrap gap-4">
+        <li class="bg-gray-800 p-2 rounded-lg w-[45%]">
+          <a href={LINKS.linkedin} target="_blank">
+            <div class="flex items-center gap-2">
+              <Icon name="ri:linkedin-fill" class="h-6" />
+              <span class="text-sm truncate">Linkedin</span>
+            </div>
+          </a>
         </li>
-        <li>
-          <a href={LINKS.github} target="_blank">Github</a>
+        <li class="bg-gray-800 p-2 rounded-lg w-[45%]">
+          <a href={LINKS.github} target="_blank">
+            <div class="flex items-center gap-2">
+              <Icon name="ri:github-fill" class="h-6" />
+              <span class="text-sm truncate">Github</span>
+            </div>
+          </a>
         </li>
-        <li>
-          <a href={LINKS.medium} target="_blank">Medium</a>
+        <li class="bg-gray-800 p-2 rounded-lg w-[45%]">
+          <a href={LINKS.facebook} target="_blank">
+            <div class="flex items-center gap-2">
+              <Icon name="ri:facebook-fill" class="h-6" />
+              <span class="text-sm truncate">Facebook</span>
+            </div>
+          </a>
         </li>
-        <li>
-          <a href={LINKS.discord} target="_blank">Discord</a>
+        <li class="bg-gray-800 p-2 rounded-lg w-[45%]">
+          <a href={LINKS.instagram} target="_blank">
+            <div class="flex items-center gap-2">
+              <Icon name="ri:instagram-fill" class="h-6" />
+              <span class="text-sm truncate">Instagram</span>
+            </div>
+          </a>
         </li>
       </ul>
     </div>
